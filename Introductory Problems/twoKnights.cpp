@@ -52,51 +52,33 @@ double eps = 1e-12;
 #define sz(x) ((ll)(x).size())
  
 
+long long C(int n, int r) {
+    if(r > n - r) r = n - r; // because C(n, r) == C(n, n - r)
+    long long ans = 1;
+    int i;
+
+    for(i = 1; i <= r; i++) {
+        ans *= n - r + i;
+        ans /= i;
+    }
+
+    return ans;
+}
+
 void solve(){
-    ll x,y;
-    cin>>x>>y;
-    ll rowFirst, colFirst;
-    if(x%2==0){
-        rowFirst= x*x;
-    }
-    else{
-        rowFirst= (x-1)*(x-1) +1;
-    }
-
-    if(y%2==1){
-        colFirst= y*y;
-    }
-    else{
-        colFirst=(y-1)*(y-1)+1;
-    }
-
-    // cout<<rowFirst<<" "<<colFirst<<endl;
-    if(y>x){
-        if(y%2){
-            cout<<colFirst- (x-1)<<endl;
-        }
+    ll n;
+    cin>>n;
+    cout<<0<<endl;
+    for(int i=2; i<=n; i++){
+        if(i==2) cout<<6<<endl;
         else{
-            cout<<colFirst+(x-1)<<endl;
+            cout<< C(i*i,2)- 4*(i-2)*(i-1)<<endl;
         }
     }
-    else{
-        if(x%2){
-            cout<<rowFirst+(y-1)<<endl;
-        }
-        else{
-            cout<<rowFirst-(y-1)<<endl;
-        }
-    }
-    
-
 }
 int main()
 {
  fast_cin();
- ll t;
- cin >> t;
- while(t--) {
 solve();
- }
  return 0;
 }
