@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 int dp[int(1e6) + 1];
 
 int solve(int n){
@@ -29,6 +28,5 @@ int main(){
     int n; cin>>n;
     memset(dp, -1, sizeof(dp));
     cout<<solve(n);
-    // cout<<n;
     return 0;
 }

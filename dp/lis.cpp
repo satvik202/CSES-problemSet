@@ -21,8 +21,6 @@ int main(){
     // }
 
     // cout<<*max_element(begin(dp), end(dp))<<endl;
-
-
     // now we'll be using binary search 
 
     vector<int>lis;

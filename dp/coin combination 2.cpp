@@ -16,8 +16,6 @@ int solve(vector<int>&coins, int ind, int k, vector<vector<long long>>&dp){
 
     return dp[ind][k] = (pick + notPick)%mod;
 }
-
-
 int main(){
  
     long long n, K; cin>>n>>K;
@@ -41,8 +39,5 @@ int main(){
 
         prev = curr;
     }
-
-
     cout<<prev[K]<<endl;
-   
 }

@@ -2,7 +2,6 @@
 using namespace std;
 
 int n,m;
-
 int solve(string &a, string &b, int i, int j, vector<vector<int>>&dp){
     if(i==n){
         return m-j;
@@ -30,8 +29,6 @@ int main(){
     string a,b;
     cin>>a>>b;
     n= a.size(), m= b.size();
-
     vector<vector<int>>dp(n+1, vector<int>(m+1,-1));
-
     cout<<solve(a,b, 0,0, dp)<<endl;
 }

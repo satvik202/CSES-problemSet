@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 const int mod = int(1e9)+7;
 long long dp[int(1e6)+1];
 int main(){
